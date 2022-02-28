@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructivisme</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+
+        }
+        #R1{
+            border: 8px solid white;
+            z-index: 10;
+            margin: auto;
+            display: flex;
+            left: 0px;
+            position: absolute;
+            background-color: #283C3D;
+            width: 300px;
+            height: 700px;
+        }
+        #R2{
+            border: 8px solid white;
+            z-index: 1;
+            margin: auto;
+            display: flex;
+            top: auto;
+            /* right: 200px; */
+            position: absolute;
+            background-color: #D7313D;
+            width: 1500px;
+            height: 700px;
+        }
+        #R3{
+            border: 8px solid white;
+            z-index: 5;
+            margin: auto;
+            display: flex;
+            top: 110px;
+            /* right: 200px; */
+            position: absolute;
+            background-color: #6F9774;
+            width: 1400px;
+            height: 500px;
+        }
+        #cercle{
+            border: 8px solid white;
+            z-index: 15;
+            margin: auto;
+            display: flex;
+            top: 110px;
+            right: 950px;
+            position: absolute;
+            background-color: #273469;
+            width: 500px;
+            height: 500px;
+            border-radius: 100%;
+        }
+
+        #proig{
+            z-index: 30;
+            display: flex;
+            top: 40px;
+            right: 80px;
+            position: absolute;
+            width: 475px;
+            height: auto;
+        }
+        #pnegre{
+            z-index: 35;
+            display: flex;
+            top: 200px;
+            right: 400px;
+            position: absolute;
+            width: 46%;
+            height: 46%;
+        }
+        #t1{
+            z-index: 40;
+            display: flex;
+            top: 220px;
+            left: 160px;
+            position: absolute;
+            font-family: 'Roboto', sans serif;
+            font-weight: 600;
+            font-size: 4em;
+            text-align:center;
+            color: white; 
+        }
+        #xica{
+            z-index: 45;
+            display: flex;
+            top: 150px;
+            right: 1050px;
+            position: absolute;
+            width: 21%;
+            height: auto;
+        }
+        #t2{
+            z-index: 50;
+            display: flex;
+            top: 150px;
+            left: 600px;
+            position: absolute;
+            font-family: 'Roboto', sans serif;
+            font-weight: 600;
+            font-size: 8em;
+            text-align:center;
+            color: white; 
+        }
+
+        #t3{
+            z-index: 65;
+            display: flex;
+            top: 150px;
+            left: 1100px;
+            position: absolute;
+            font-family: 'Oswald', sans-serif;
+            
+            font-size: 4em;
+            text-align:center;
+            color: white; 
+        }
+        .rect{
+            position: absolute;
+            z-index: 60;
+            width: 360px;
+            height: 270px;
+            top: 230px;
+            right: 60px;
+            background-color: #D7313D;
+        }
+        #t4{
+            z-index: 70;
+            display: flex;
+            top: -60px;
+            left: 40px;
+            position: absolute;
+            font-family: 'Roboto', sans serif;
+            font-weight: 600;
+            font-size: 5em;
+            text-align:center;
+            color: white; 
+        }
+        #t5{
+            z-index: 70;
+            display: flex;
+            top: 540px;
+            left: 40px;
+            position: absolute;
+            font-family: 'Roboto', sans serif;
+            font-weight: 600;
+            font-size: 5em;
+            text-align:center;
+            color: white; 
+        }
+
+
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            // $("#xica").hover(function(){
+            //     $("#xica").toggle();
+            // });
+            // $("#t1").hover(function(){
+            //     $("#t1").toggle();
+            // });
+
+            $("#xica, #t2").hide();
+            $("#t1").click(function(){
+                $("#xica, #t2").show();
+                $(this).hide();
+               
+            });    
+            $("#xica").click(function(){
+                $("#t1").show();
+                $("#xica, #t2").hide();
+              
+            })
+
+            $("#t3").hide();
+            $(".rect").mouseenter(function(){
+                $("#t3").show();
+            });
+            $(".rect").mouseleave(function(){
+                $("#t3").hide();
+            });
+            
+            
+
+            
+            
+        });
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <div id="R1">
+        </div>
+
+        <div id="R2">
+        </div>
+
+        <div id="R3">
+        </div>
+
+        <div id="cercle">
+        </div>
+
+        <img id="proig" src="poligono roig-02.svg" alt="insertar SVG con la etiqueta image">
+
+        <p id="t1">Aleksandr <br>
+            Ródchenko</p>
+
+        <p id="t2">Eyyyy!!</p>
+
+        <p id="t3">SI NO <br>
+            TIENE LIBROS, <br>
+             NO TE LO TIRES</p>
+
+            
+        <a href="Lengiz.jpg"><p id="t4">L E N G I Z</p></a>
+
+        <p id="t5">1 9 2 4</p>
+
+            <div class="rect"></div>
+        <img id="pnegre" src="poligono negre-03.svg" alt="insertar SVG con la etiqueta image">
+        <img id="xica" src="xica-04-04.png" alt="insertar SVG con la etiqueta image">
+
+    </div>
+</body>
+</html>
